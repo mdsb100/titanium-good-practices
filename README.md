@@ -86,7 +86,7 @@ Be careful about the assets of webview in tishadow
 
 ## Reduce the error
 
-### Make sure you know exactly the result of API on different platforms
+### Make sure you exactly know the result of API on different platforms
 example (coffeescript)
 ```
 view = Ti.UI.createView
