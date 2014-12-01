@@ -136,6 +136,11 @@ You should imitate the sytle of source code
 
 ### test: [chai](https://github.com/chaijs/chai) [mocha](https://github.com/mochajs/mocha)
 
+### util: [underscore](http://underscorejs.org/)
+Underscore is inner in titanium enviorment if the file is a controller
+When you use underscore in lib/*.js, you should require it by yourself
+Make sure the underscore document`s version equals titanium
+
 
 ## Finally
 ### Share your exprenrice to [Q&A](http://developer.appcelerator.com/questions/newest)
