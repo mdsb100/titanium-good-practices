@@ -134,6 +134,9 @@ You should imitate the sytle of source code
 
 ### async: [async](https://github.com/caolan/async)
 
+### test: [chai](https://github.com/chaijs/chai) [mocha](https://github.com/mochajs/mocha)
+
+
 ## Finally
 ### Share your exprenrice to [Q&A](http://developer.appcelerator.com/questions/newest)
 
