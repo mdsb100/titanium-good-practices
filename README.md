@@ -14,7 +14,7 @@ Imroving productivity, giving a automated solution
 #### Make sure the backbone document`s version is 0.9.2 when you read it
 >Currently, Alloy is using Backbone version 0.9.2, which is not the most current version of Backbone. The documentation links in the Model guides link to version 0.9.2 of the Backbone documentation. If you go to the official Backbone site, the documentation might be out-of-sync with these guides.
 
-## Create your CLI command like [jake](https://github.com/jakejs/jake)
+### Create your CLI command like [jake](https://github.com/jakejs/jake)
 example (coffeescript)
 ```
 appplatform = switch process.env.appplatform
