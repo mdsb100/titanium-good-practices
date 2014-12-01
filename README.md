@@ -108,6 +108,8 @@ console.log "My view`s id is %s", view.id
 
 ### Be careful use of Alloy.global
 
+### Create unit test in a light project, test your network in web first 
+
 ### At lastest, you could read [titanium-mobile source code](https://github.com/appcelerator/titanium_mobile) if you could not solve your error
 
 ### Don`t modify tainium-mobile source code and build your own titainum SDK to solve your problem although you can build it easily
@@ -122,7 +124,15 @@ console.log "My view`s id is %s", view.id
 ### Search in module-market [http://gitt.io/] before you create module
 
 ### Read [source code](https://github.com/appcelerator/titanium_modules) before your create module
-You should imitate the sytle of source code 
+You should imitate the sytle of source code
+
+## Third party library of javascript
+
+### sync: [restapi](https://github.com/viezel/napp.alloy.adapter.restapi) [restsql](https://github.com/viezel/napp.alloy.adapter.restsql)
+
+### date: [moment](https://github.com/moment/moment)
+
+### async: [async](https://github.com/caolan/async)
 
 ## Finally
 ### Share your exprenrice to [Q&A](http://developer.appcelerator.com/questions/newest)
