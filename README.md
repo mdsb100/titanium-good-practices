@@ -79,9 +79,11 @@ task('pre:compile', function(event, logger) {
 ```
 
 ### Using [tishadow](https://github.com/dbankier/TiShadow) to quickly build and update project
+TiShadow provides Titanium developers the ability to deploy apps, run tests or execute code snippets live across all running iOS and Android devices.
+
 Be careful about the assets of webview in tishadow
 
-### Using [Genymotion](http://www.genymotion.com/) quicken buildind simulator on android 
+### Using [Genymotion](http://www.genymotion.com/) quicken building simulator on android 
 [Installing Genymotion](http://docs.appcelerator.com/titanium/3.0/#!/guide/Installing_Genymotion)
 
 ## Reduce the error
