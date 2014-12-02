@@ -4,7 +4,6 @@ titanium-good-practices
 Make titanium easily and powerfully
 
 ## On the whole
-
 ### Using CLI insteads of titanium studio to create, build, deploy, release or write
 Imroving productivity, giving a automated solution
 [Titanium Command-Line Interface Reference](http://docs.appcelerator.com/titanium/3.0/#!/guide/Titanium_Command-Line_Interface_Reference)
@@ -15,7 +14,7 @@ Imroving productivity, giving a automated solution
 >Currently, Alloy is using Backbone version 0.9.2, which is not the most current version of Backbone. The documentation links in the Model guides link to version 0.9.2 of the Backbone documentation. If you go to the official Backbone site, the documentation might be out-of-sync with these guides.
 
 ### Create your CLI command like [jake](https://github.com/jakejs/jake)
-example (coffeescript)
+jakefile (coffeescript)
 ```
 appplatform = switch process.env.appplatform
   when 'ios', 'android' then process.env.appplatform
@@ -45,7 +44,6 @@ task 'build', ['prepare'], {async: true}, ->
 ```
 
 ## Improve development efficiency
-
 ### Using [jslint](https://github.com/reid/node-jslint) to check code by CLI if you wirte javascript 
 
 ### Easily write code by using [CoffeeScript](http://coffeescript.org/), and check code by [coffeelint](http://www.coffeelint.org/)
@@ -86,8 +84,8 @@ Be careful about the assets of webview in tishadow
 ### Using [Genymotion](http://www.genymotion.com/) quicken building simulator on android 
 [Installing Genymotion](http://docs.appcelerator.com/titanium/3.0/#!/guide/Installing_Genymotion)
 
-## Reduce the error
 
+## Reduce the error
 ### Make sure you exactly know the result of API on different platforms
 example (coffeescript)
 ```
@@ -127,7 +125,6 @@ console.log "My view`s id is %s", view.id
 You should imitate the sytle of source code
 
 ## Third party library of javascript
-
 ### sync: [restapi](https://github.com/viezel/napp.alloy.adapter.restapi) [restsql](https://github.com/viezel/napp.alloy.adapter.restsql)
 
 ### date: [moment](https://github.com/moment/moment)
