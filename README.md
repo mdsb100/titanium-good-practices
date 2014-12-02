@@ -85,7 +85,7 @@ Be careful about the assets of webview in tishadow
 [Installing Genymotion](http://docs.appcelerator.com/titanium/3.0/#!/guide/Installing_Genymotion)
 
 
-## Reduce the error
+## Check and avoid the error
 ### Make sure you exactly know the result of API on different platforms
 example (coffeescript)
 ```
@@ -96,8 +96,9 @@ view = Ti.UI.createView
 view.applyProperties
   backgroundColor: 'red'
   id: 'myview'
+  cls: 'header'
  
-console.log "My view`s id is %s", view.id
+console.log "My view`s cls is %s", view.cls
 
 ```
 #### There are many mistake on another platform, so check it first
@@ -112,6 +113,77 @@ console.log "My view`s id is %s", view.id
 
 ### Don`t modify tainium-mobile source code and build your own titainum SDK to solve your problem although you can build it easily
 [Building the Titanium SDK](http://docs.appcelerator.com/titanium/3.0/#!/guide/Building_the_Titanium_SDK_From_Source)
+
+
+## Code specification
+
+### The use of ‘Ti’ has been using 'Ti'
+```
+# file a
+Ti.Network.getOnline()
+```
+
+```
+# file b
+# It`s wrong
+Titanium.App.version
+```
+
+### Don`t use '$.' to export public things in controller
+First and foremost all of the things in '$' will be extend to exports
+Check the resource code, you will see 
+```
+_.extend($, exports);
+```
+Other man can easily read which thing you hope to make it public
+```
+# wrong
+$.updateUserInfo = (userInfo) ->
+```
+
+```
+# right
+exports.updateUserInfo = (userInfo) ->
+```
+
+### Best to [bind data](http://docs.appcelerator.com/titanium/3.0/#!/guide/Alloy_Data_Binding) in xml(jade)
+```
+<Alloy>
+    <Collection src="book"/>
+    <Window backgroundColor="white" onClose="cleanup">
+        <ScrollableView dataCollection="book">
+            <View layout="vertical">
+                <ImageView image="{cover}" />
+                <Label text="{title} by {artist}" />
+            </View>
+        </ScrollableView>	
+    </Window>
+</Alloy>
+```
+
+### Obviously using the platform
+Don`t use 'else', although your application only support iOS and android
+```
+#It`s wrong
+if OS_IOS
+  height = 45
+else
+  height = 40
+```
+```
+# better
+height = 45
+if OS_ANDROID
+  height = 40
+```
+```
+# right
+if OS_IOS
+  height = 45
+else if OS_ANDROID
+  height = 40
+```
+
 
 
 ## Titanium Module
