@@ -3,6 +3,8 @@ titanium-good-practices
 
 Make titanium easily and powerfully
 
+### [Officer Best Practies](http://docs.appcelerator.com/titanium/latest/#!/guide/Coding_Best_Practices-section-30082362_CodingBestPractices-Don%27tExtendTitaniumPrototypes)
+
 ## On the whole
 ### Using CLI insteads of titanium studio to create, build, deploy, release or write
 Imroving productivity, giving a automated solution
@@ -45,8 +47,6 @@ task 'build', ['prepare'], {async: true}, ->
 
 ## Improve development efficiency
 ### Using [jslint](https://github.com/reid/node-jslint) to check code by CLI if you wirte javascript 
-
-### Easily write code by using [CoffeeScript](http://coffeescript.org/), and check code by [coffeelint](http://www.coffeelint.org/)
 
 ### Easily write xml by using [jade](https://github.com/jadejs/jade)
 Modify alloy.jmk to redirect xml to jade
@@ -105,7 +105,7 @@ console.log "My view`s cls is %s", view.cls
 
 ### If you could not ensure which mistake in your file then check source javascript file like 'Resources/$platform/alloy/controllers/index.js'
 
-### Be careful use of Alloy.global
+### Be careful use of Alloy.global and global value
 
 ### Create unit test in a light project, test your network in web first 
 
@@ -146,25 +146,10 @@ $.updateUserInfo = (userInfo) ->
 exports.updateUserInfo = (userInfo) ->
 ```
 
-### Best to [bind data](http://docs.appcelerator.com/titanium/3.0/#!/guide/Alloy_Data_Binding) in xml(jade)
-```
-<Alloy>
-    <Collection src="book"/>
-    <Window backgroundColor="white" onClose="cleanup">
-        <ScrollableView dataCollection="book">
-            <View layout="vertical">
-                <ImageView image="{cover}" />
-                <Label text="{title} by {artist}" />
-            </View>
-        </ScrollableView>	
-    </Window>
-</Alloy>
-```
-
 ### Obviously using the platform
 Don`t use 'else', although your application only support iOS and android
 ```
-#It`s wrong
+# wrong
 if OS_IOS
   height = 45
 else
@@ -183,7 +168,6 @@ if OS_IOS
 else if OS_ANDROID
   height = 40
 ```
-
 
 
 ## Titanium Module
@@ -210,10 +194,27 @@ Underscore is inner in titanium enviorment if the file is a controller
 When you use underscore in lib/*.js, you should require it by yourself
 Make sure the underscore document`s version equals titanium
 
-
 ## Finally
 ### Share your exprenrice to [Q&A](http://developer.appcelerator.com/questions/newest)
 
 ### Report issuses to [titanium](https://jira.appcelerator.org/)
 
 ### Wirte your good practices in this README.md
+
+## Support, not good pracites
+### Easily write code by using [CoffeeScript](http://coffeescript.org/), and check code by [coffeelint](http://www.coffeelint.org/)
+
+### Best to [bind data](http://docs.appcelerator.com/titanium/3.0/#!/guide/Alloy_Data_Binding) in xml(jade)
+```
+<Alloy>
+    <Collection src="book"/>
+    <Window backgroundColor="white" onClose="cleanup">
+        <ScrollableView dataCollection="book">
+            <View layout="vertical">
+                <ImageView image="{cover}" />
+                <Label text="{title} by {artist}" />
+            </View>
+        </ScrollableView>	
+    </Window>
+</Alloy>
+```
