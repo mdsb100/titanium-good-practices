@@ -174,6 +174,8 @@ else if OS_ANDROID
 ### Check all of the titnaium API before you create it
 
 ### Read [document](http://docs.appcelerator.com/titanium/3.0/#!/guide/Using_a_Module) clearly before you create module
+[iOS Module Development Guide](http://docs.appcelerator.com/titanium/3.0/#!/guide/iOS_Module_Development_Guide)
+[android Module Development Guide](http://docs.appcelerator.com/titanium/3.0/#!/guide/Android_Module_Development_Guide)
 
 ### Search in module-market [http://gitt.io/] before you create module
 
