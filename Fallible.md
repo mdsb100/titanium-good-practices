@@ -6,4 +6,4 @@ If you omit "PRIMARY KEY" in config of sql and save model many times, next time 
 
 ## Forget debinding
 - Call 'destroy' when you really wanna release the controller, if you use data-binding
-- 'Ti.App.removeEventListener', don`t forget remove event listener especially 'Ti.app'
+- 'Ti.App.removeEventListener', don`t forget remove event listener especially 'Ti.App'
