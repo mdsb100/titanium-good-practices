@@ -33,6 +33,6 @@ ShareSDKModuleDemo
 ```
 终端输入：
 ```
-ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsharesdk --url=www.test.testsharesdk -d ios
+ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsharesdk --url=www.test.testsharesdk --workspace-dir=ios
 ```
 ![create_module](https://cloud.githubusercontent.com/assets/2350193/5605111/24a34b44-9424-11e4-8863-ae35eb13cb97.png)

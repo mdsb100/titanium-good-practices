@@ -12,6 +12,6 @@ copyright: Copyright (c) 2015 by Your Company
 # these should not be edited
 name: TestShareSDK
 moduleid: com.test.testsharesdk
-guid: 7fa39fcb-955e-4838-bee1-2180c5397ecf
+guid: df394c6f-fb4b-4cfb-a4bb-84cd4534b109
 platform: iphone
 minsdk: 3.4.1.GA
