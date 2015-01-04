@@ -73,6 +73,7 @@ ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsh
 ### 执行 `./build.sh`
 
 ### 修改 ShareSDKTestApp文件夹下的[tiapp.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/tiapp.xml)
+非常重要，否则微信不能跳转回来。还有不要忘记在modules中加入配置module。
 ```
 <key>CFBundleURLTypes</key>
 <array>
@@ -86,6 +87,17 @@ ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsh
     </dict>
 </array>
 ```
-非常重要，否则微信不能跳转回来。还有不要忘记在modules中加入配置module
+新浪微博也需要加。这里没加给出个示例。
+```
+<dict>
+    <key>CFBundleURLName</key>
+    <string>wb</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+        <string>wb00000000</string>
+    </array>
+</dict>
+```
+string里的值就是各个平台申请的appkey。
 
 ### 跳转回主[README.md](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo)
