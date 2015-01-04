@@ -36,3 +36,56 @@ ShareSDKModuleDemo
 ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsharesdk --url=www.test.testsharesdk --workspace-dir=ios
 ```
 ![create_module](https://cloud.githubusercontent.com/assets/2350193/5605111/24a34b44-9424-11e4-8863-ae35eb13cb97.png)
+
+### 复制ShareSDK到module
+![copy_sdk](https://cloud.githubusercontent.com/assets/2350193/5605230/97d9cbf0-942a-11e4-99bf-653a110a1e05.png)
+
+
+### 打开 "iphone/TestShareSDK.xcodeproj"
+
+### 把assets文件夹拖入到项目中，不要"copy items if needed"。
+
+### 把platform文件夹拖入到项目中，需要"copy items if needed"。
+![drag_into_product](https://cloud.githubusercontent.com/assets/2350193/5605268/de3062ec-942c-11e4-89ee-d20b7500e2a8.png)
+
+### 把所有bundle文件和string文件放入到platform/iphone文件夹下。
+若有不明白可以查看titanium官网了解 platform/iphone的意义
+![ios_bundle](https://cloud.githubusercontent.com/assets/2350193/5606431/91c49124-946a-11e4-80ea-659204d9fcbc.png)
+
+### 修改[module.xcconfig](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ios/TestShareSDK/iphone/module.xcconfig)
+需要注意的是，如果你用什么平台就要加什么Framework。参考[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)
+
+### 仔细阅读官网，如果你需要用到的平台需要特殊设置，请照着官网做！
+
+### 修改代码[ComBaidaoTestsharesdkModule.h](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ios/TestShareSDK/iphone/Classes/ComTestTestsharesdkModule.h)
+
+### 修改代码[ComBaidaoTestsharesdkModule.m](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ios/TestShareSDK/iphone/Classes/ComTestTestsharesdkModule.m)
+修改的代码中会去读取下一步中的ShareSDK.plist。
+
+这个方法"-(void)resumed:(id)sender"是处理handleOpenURL的回调。
+
+### 在assets中增加[appicon.jpg](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios/TestShareSDK/assets/appicon.jpg)和[ShareSDK.plist](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios/TestShareSDK/assets/ShareSDK.plist)
+注意这一步很重要，配置了appkey
+
+### 预备发布。在iphone文件夹下增加文件[build.sh](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ios/TestShareSDK/iphone/build.sh)
+目的是把module解压到ShareSDKTestApp下
+
+### 执行 `./build.sh`
+
+### 修改 ShareSDKTestApp文件夹下的[tiapp.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/tiapp.xml)
+```
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLName</key>
+        <string>wx</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>wx4868b35061f87885</string>
+        </array>
+    </dict>
+</array>
+```
+非常重要，否则微信不能跳转回来。还有不要忘记在modules中加入配置module
+
+### 跳转回主[README.md](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo)

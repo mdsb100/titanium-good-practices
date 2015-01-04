@@ -1,5 +1,5 @@
 <Alloy>
 	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+		<Label id="label" onClick="doClick">Click Me To Test ShareSDK</Label>
 	</Window>
 </Alloy>

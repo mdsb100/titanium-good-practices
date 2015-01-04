@@ -34,6 +34,17 @@
 				<false/>
 				<key>UIStatusBarStyle</key>
 				<string>UIStatusBarStyleDefault</string>
+        <key>CFBundleURLTypes</key>
+        <array>
+            <dict>
+                <key>CFBundleURLName</key>
+                <string>wx</string>
+                <key>CFBundleURLSchemes</key>
+                <array>
+                    <string>wx4868b35061f87885</string>
+                </array>
+            </dict>
+        </array>
 			</dict>
 		</plist>
 	</ios>
@@ -49,7 +60,8 @@
 		<theme>default</theme>
 	</mobileweb>
 	<modules>
-	</modules>
+    <module platform="iphone" version="1.0.0">com.test.testsharesdk</module>
+  </modules>
 	<deployment-targets>
 		<target device="android">true</target>
 		<target device="blackberry">false</target>

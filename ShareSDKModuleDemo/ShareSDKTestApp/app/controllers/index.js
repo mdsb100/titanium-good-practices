@@ -1,5 +1,11 @@
+var testsharesdk = require("com.test.testsharesdk");
+
 function doClick(e) {
-    alert($.label.text);
+  testsharesdk.share({
+    title: "测试",
+    content: "Hello World!!!",
+    url: "www.test.com"
+  });
 }
 
 $.index.open();

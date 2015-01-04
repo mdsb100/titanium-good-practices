@@ -8,5 +8,15 @@
 - 初始化alloy。输入`cd ShareSDKModuleDemo/ShareSDKTestApp`进入刚才创建的app目录。输入`alloy new`[参考alloy](http://docs.appcelerator.com/titanium/3.0/#!/guide/Alloy_Quick_Start)
 - 启动app。如果是ios的话输入`ti build -p ios`。如果是android的话输入`ti build -p android -T device`，注意插上android真机。
 
-### iOS [教程](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios)
-### android [教程](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android)
+### 跳转[iOS教程](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios)
+### 跳转 [android教程](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android)
+
+### 修改[ShareSDKTestApp/app/controllers/index.js](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/app/controllers/index.js)
+
+### 修改[ShareSDKTestApp/app/views/index.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/app/views/index.xml)
+
+### 在ShareSDKTestApp文件夹下创建[build.sh](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/build_ios.sh)
+
+### 执行 ```./build_ios.sh```
+![ios_share](https://cloud.githubusercontent.com/assets/2350193/5606490/99f580e0-946c-11e4-89d3-7a3036bb5508.png)
+

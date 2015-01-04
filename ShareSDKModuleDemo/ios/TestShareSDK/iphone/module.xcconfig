@@ -1,11 +1,11 @@
 //
-// PLACE ANY BUILD DEFINITIONS IN THIS FILE AND THEY WILL BE 
+// PLACE ANY BUILD DEFINITIONS IN THIS FILE AND THEY WILL BE
 // PICKED UP DURING THE APP BUILD FOR YOUR MODULE
 //
 // see the following webpage for instructions on the settings
 // for this file:
 // http://developer.apple.com/mac/library/documentation/DeveloperTools/Conceptual/XcodeBuildSystem/400-Build_Configurations/build_configs.html
-// 
+//
 
 //
 // How to add a Framework (example)
@@ -24,4 +24,10 @@
 //
 //
 // IMPORTANT NOTE: always use $(inherited) in your overrides
-// 
+//
+
+// 此路径根是 ShareSDKTestApp/build/iphone
+
+t_path = "../../modules/iphone/com.test.testsharesdk/1.0.0/platform/ShareSDK/"
+
+OTHER_LDFLAGS=$(inherited) -framework CoreTelephony -framework SystemConfiguration -framework QuartzCore -framework Security -framework Social -framework Accounts -framework MessageUI -F$(t_path) -framework ShareSDK -F$(t_path)Core/ -framework AGCommon -framework ShareSDKCoreService -F$(t_path)UI/ -framework ShareSDKFlatShareViewUI -framework ShareSDKShareActionSheet -F$(t_path)Connection/ -framework FacebookConnection -framework MailConnection -framework QQConnection -framework QZoneConnection -framework SinaWeiboConnection -framework TencentWeiboConnection -framework TwitterConnection -framework WeChatConnection -framework SMSConnection -F$(t_path)Extend/QQConnectSDK/ -framework TencentOpenAPI
