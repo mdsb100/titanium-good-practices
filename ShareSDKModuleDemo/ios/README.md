@@ -37,6 +37,8 @@ ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsh
 ```
 ![create_module](https://cloud.githubusercontent.com/assets/2350193/5605111/24a34b44-9424-11e4-8863-ae35eb13cb97.png)
 
+### 虽然当前Titanium SDK 版本不支持64位但这不影响moudle。创建出来的xcode项目Architectures已经是"Standard architectures(armv7, armv64)"
+
 ### 复制ShareSDK到module
 ![copy_sdk](https://cloud.githubusercontent.com/assets/2350193/5605230/97d9cbf0-942a-11e4-99bf-653a110a1e05.png)
 
