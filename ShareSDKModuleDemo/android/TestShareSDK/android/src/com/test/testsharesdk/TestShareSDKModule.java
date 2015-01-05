@@ -8,58 +8,170 @@
  */
 package com.test.testsharesdk;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.HashMap;
+
 import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
 
 import org.appcelerator.titanium.TiApplication;
+import org.appcelerator.titanium.util.TiRHelper;
+import org.appcelerator.titanium.util.TiRHelper.ResourceNotFoundException;
 import org.appcelerator.kroll.common.Log;
 import org.appcelerator.kroll.common.TiConfig;
+
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.PlatformActionListener;
+import cn.sharesdk.framework.PlatformDb;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.framework.utils.UIHandler;
+import cn.sharesdk.onekeyshare.OnekeyShare;
+import cn.sharesdk.sina.weibo.SinaWeibo;
+import cn.sharesdk.tencent.qzone.QZone;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Bitmap.CompressFormat;
+import android.os.Environment;
+import android.os.Message;
+import android.widget.Toast;
+
 
 
 @Kroll.module(name="TestShareSDK", id="com.test.testsharesdk")
 public class TestShareSDKModule extends KrollModule
 {
 
-	// Standard Debugging variables
-	private static final String LCAT = "TestShareSDKModule";
-	private static final boolean DBG = TiConfig.LOGD;
+  // Standard Debugging variables
+  private static final String LCAT = "TestShareSDKModule";
+  private static final boolean DBG = TiConfig.LOGD;
 
-	// You can define constants with @Kroll.constant, for example:
-	// @Kroll.constant public static final String EXTERNAL_NAME = value;
+  // You can define constants with @Kroll.constant, for example:
+  // @Kroll.constant public static final String EXTERNAL_NAME = value;
 
-	public TestShareSDKModule()
-	{
-		super();
-	}
+  public TestShareSDKModule()
+  {
+    super();
+  }
 
-	@Kroll.onAppCreate
-	public static void onAppCreate(TiApplication app)
-	{
-		Log.d(LCAT, "inside onAppCreate");
-		// put module init code that needs to run when the application is created
-	}
+  @Kroll.onAppCreate
+  public static void onAppCreate(TiApplication app)
+  {
+    Log.d(LCAT, "inside onAppCreate");
+    ShareSDK.initSDK(app);
+    // put module init code that needs to run when the application is created
+  }
 
-	// Methods
-	@Kroll.method
-	public String example()
-	{
-		Log.d(LCAT, "example called");
-		return "hello world";
-	}
+  @Kroll.method
+  public void share(final HashMap args){
+    Log.d(LCAT, "share");
+    Log.d(LCAT, getActivity().toString());
 
-	// Properties
-	@Kroll.getProperty
-	public String getExampleProp()
-	{
-		Log.d(LCAT, "get example property");
-		return "hello world";
-	}
+    Activity activity = TiApplication.getInstance().getCurrentActivity();
+    Log.d(LCAT, activity.toString());
+    ShareSDK.initSDK(activity);
+
+    String title = "" , content = "", url ="", type= "";
+    if (args.containsKey("title")) {
+      Object otitle = args.get("title");
+      if (otitle instanceof String) {
+        title = (String)otitle;
+      }
+    }
+    if (args.containsKey("content")) {
+      Object ocontent = args.get("content");
+      if (ocontent instanceof String) {
+        content = (String)ocontent;
+      }
+    }
+    if (args.containsKey("url")) {
+      Object ourl = args.get("url");
+      if (ourl instanceof String) {
+        url = (String)ourl;
+      }
+    }
+    if (args.containsKey("type")) {
+      Object otype = args.get("type");
+      if (otype instanceof String) {
+        type = (String)otype;
+      }
+    }
+
+    Log.d(LCAT, title);
+    Log.d(LCAT, content);
+    Log.d(LCAT, url);
+    Log.d(LCAT, type);
+
+    final OnekeyShare oks = new OnekeyShare();
+
+    int appicon = 0x7f020000;
+
+    try {
+      appicon = TiRHelper.getApplicationResource("drawable.appicon");
+      Log.d(LCAT, "getApplicationResource drawable.appicon");
+    } catch (ResourceNotFoundException e) {
+    }
+
+    oks.setNotification(appicon, "测试ShareSDK");
+
+    oks.setAddress("000000");
+    oks.setTitle(title);
+    oks.setText(content);
+    Log.d(LCAT, resolveUrl(null,""));
+//      oks.setImagePath(resolveUrl(null,""));
+//      oks.setImageUrl("http://img.appgo.cn/imgs/sharesdk/content/2013/07/25/1374723172663.jpg");
+    if (url != ""){
+      oks.setUrl(url);
+    }
+//      oks.setFilePath(resolveUrl(null,""));
+//      oks.setComment(menu.getContext().getString(R.string.share));
+
+//      oks.setSite(menu.getContext().getString(R.string.app_name));
+//      oks.setSiteUrl("http://sharesdk.cn");
+
+//      oks.setVenueName("ShareSDK");
+//      oks.setVenueDescription("This is a beautiful place!");
+//      oks.setLatitude(23.056081f);
+//      oks.setLongitude(113.385708f);
+    oks.setSilent(false);
+
+//      oks.setShareContentCustomizeCallback(new ShareContentCustomizeDemo());
+    Log.d(LCAT, activity.toString());
+    oks.show(activity.getBaseContext());
+    Log.d(LCAT, "show finish");
+  }
+
+  @Kroll.method
+  public void stop(){
+    ShareSDK.stopSDK(TiApplication.getInstance().getCurrentActivity());
+  }
+
+  // Methods
+  @Kroll.method
+  public String example()
+  {
+    Log.d(LCAT, "example called");
+    return "hello world";
+  }
+
+  // Properties
+  @Kroll.getProperty
+  public String getExampleProp()
+  {
+    Log.d(LCAT, "get example property");
+    return "hello world";
+  }
 
 
-	@Kroll.setProperty
-	public void setExampleProp(String value) {
-		Log.d(LCAT, "set example property: " + value);
-	}
+  @Kroll.setProperty
+  public void setExampleProp(String value) {
+    Log.d(LCAT, "set example property: " + value);
+  }
 
 }
 

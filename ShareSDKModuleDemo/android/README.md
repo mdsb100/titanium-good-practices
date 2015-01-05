@@ -75,3 +75,6 @@ windows如果不行就写绝对路径。
 
 ### 增加[ShareSDK.xml](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android/TestShareSDK/assets/ShareSDK.xml)
 ShareSDK.xml是配置appkey的。
+
+### 修改[TestShareSDKModule.java](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/src/com/test/testsharesdk/TestShareSDKModule.java)
+增加share这个方法。
