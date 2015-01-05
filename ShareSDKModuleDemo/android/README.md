@@ -37,3 +37,20 @@ ShareSDKModuleDemo
 ```
 ti create --platforms=android --type=module --name=TestShareSDK --id=com.test.testsharesdk --url=www.test.testsharesdk --workspace-dir=android
 ```
+
+### 打开Eclipse。export "Existing Projects into Workspace"把刚创建android项目导入进来。这步可以不做，完全可以不需要Eclipse，为了看的更清楚。
+
+### 配置[build.properties](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/build.properties)
+```
+titanium.platform=${env.HOME}/Library/Application Support/Titanium/mobilesdk/osx/3.2.0.GA/android
+android.platform=${env.ANDROID_SDK}/platforms/android-10
+google.apis=${env.ANDROID_SDK}/add-ons/addon-google_apis-google-10
+android.ndk=${env.ANDROID_NDK}
+```
+windows如果不行就写绝对路径。
+
+### 加入一行```<property environment="env"/>```到[build.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/build.xml)
+
+### Terminal中输入```and dist```。看看是否build成功。这里要装ant。
+
+### 修改[timodule.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/timodule.xml)。增加权限，参考[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)
