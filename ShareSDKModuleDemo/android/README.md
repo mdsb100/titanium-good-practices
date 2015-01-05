@@ -71,7 +71,7 @@ windows如果不行就写绝对路径。titanium.platform根据你自己的平�
 ### 复制src
 ![android_copy_src](https://cloud.githubusercontent.com/assets/2350193/5615737/f6b2924c-9538-11e4-961c-53cb76dba1d3.png)
 
-### 增加[ShareSDK.xml](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android/TestShareSDK/assets/ShareSDK.xml)和增加[ShareSDK.xml](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android/TestShareSDK/assets/shareicon.jpg)
+### 增加[ShareSDK.xml](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android/TestShareSDK/assets/ShareSDK.xml)和增加[shareicon.jpg](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android/TestShareSDK/assets/shareicon.jpg)
 ShareSDK.xml是配置appkey的。
 shareicon.jpg是分享的默认图片。
 
