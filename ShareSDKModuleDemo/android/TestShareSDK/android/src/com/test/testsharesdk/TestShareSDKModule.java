@@ -54,9 +54,55 @@ public class TestShareSDKModule extends KrollModule
   // You can define constants with @Kroll.constant, for example:
   // @Kroll.constant public static final String EXTERNAL_NAME = value;
 
+  private static final String SHAREICONNAME = "shareicon";
+  private static int SHAREICON;
+  private static String SHAREICONPATH;
+
   public TestShareSDKModule()
   {
     super();
+  }
+
+  public static String copyFileIntoSDCard(TiApplication app, String fileName){
+
+    String path = null;
+    try {
+      if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())
+          && Environment.getExternalStorageDirectory().exists()) {
+        path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + fileName;
+      }
+      else {
+        path = TiApplication.getInstance().getFilesDir().getAbsolutePath() + "/"+ fileName;
+      }
+      Log.d(LCAT, path);
+      InputStream in = null;
+      OutputStream out = null;
+
+      try{
+            in = app.getAssets().open(fileName);
+            File outFile = new File(path);
+            if (!outFile.exists()) {
+              out = new FileOutputStream(outFile);
+              Bitmap bitmap = BitmapFactory.decodeStream(in);
+              bitmap.compress(CompressFormat.PNG, 100, out);
+          }
+          }
+          catch (IOException e) {
+          Log.e(LCAT, e.getMessage());
+        }
+      finally{
+        in.close();
+          in = null;
+          out.close();
+          out = null;
+      }
+
+      Log.d(LCAT, "Copy file into sd card:" + path);
+    } catch(Throwable t) {
+      Log.e(LCAT, t.getMessage());
+      Log.e(LCAT, "Copy file into sd card fail");
+    }
+    return path;
   }
 
   @Kroll.onAppCreate
@@ -64,6 +110,9 @@ public class TestShareSDKModule extends KrollModule
   {
     Log.d(LCAT, "inside onAppCreate");
     ShareSDK.initSDK(app);
+
+    SHAREICON = getApplicationResource(SHAREICONNAME);
+    SHAREICONPATH = copyFileIntoSDCard(app, SHAREICONNAME+".jpg");
     // put module init code that needs to run when the application is created
   }
 
@@ -76,7 +125,7 @@ public class TestShareSDKModule extends KrollModule
     Log.d(LCAT, activity.toString());
     ShareSDK.initSDK(activity);
 
-    String title = "" , content = "", url ="", type= "";
+    String title = "" , content = "", url ="", type= "", image="";
     if (args.containsKey("title")) {
       Object otitle = args.get("title");
       if (otitle instanceof String) {
@@ -101,11 +150,18 @@ public class TestShareSDKModule extends KrollModule
         type = (String)otype;
       }
     }
+    if (args.containsKey("image")) {
+      Object oimage = args.get("image");
+      if (oimage instanceof String) {
+        image = (String)oimage;
+      }
+    }
 
     Log.d(LCAT, title);
     Log.d(LCAT, content);
     Log.d(LCAT, url);
     Log.d(LCAT, type);
+    Log.d(LCAT, image);
 
     final OnekeyShare oks = new OnekeyShare();
 
@@ -128,6 +184,22 @@ public class TestShareSDKModule extends KrollModule
     if (url != ""){
       oks.setUrl(url);
     }
+
+    if(!image.isEmpty()){
+      if ( image.indexOf("http") > -1 ){
+        oks.setImageUrl(image);
+      }
+      else{
+        // 必须在resource下
+        String timage = copyFileIntoSDCard(TiApplication.getInstance(), image);
+        Log.d(LCAT, "setImagePath:" + timage);
+        oks.setImagePath(timage);
+      }
+    }
+    else{
+      Log.d(LCAT, "setImagePath:" + SHAREICONPATH);
+      oks.setImagePath(SHAREICONPATH);
+    }
 //      oks.setFilePath(resolveUrl(null,""));
 //      oks.setComment(menu.getContext().getString(R.string.share));
 
@@ -144,6 +216,19 @@ public class TestShareSDKModule extends KrollModule
     Log.d(LCAT, activity.toString());
     oks.show(activity.getBaseContext());
     Log.d(LCAT, "show finish");
+  }
+
+  public static int getApplicationResource(String fileName){
+    int result = -1;
+    try {
+      fileName = "drawable." + fileName;
+      result = TiRHelper.getApplicationResource(fileName);
+      Log.d(LCAT, "getApplicationResource success:"+ fileName);
+    } catch (ResourceNotFoundException e) {
+      Log.e(LCAT, e.getMessage());
+      Log.e(LCAT, "getApplicationResource fail:"+ fileName);
+    }
+    return result;
   }
 
   @Kroll.method
