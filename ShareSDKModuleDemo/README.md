@@ -10,6 +10,8 @@
 
 ### 跳转[iOS教程](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios)
 
+### 跳转[android教程](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android)
+
 ### 修改[ShareSDKTestApp/app/controllers/index.js](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/app/controllers/index.js)
 
 ### 修改[ShareSDKTestApp/app/views/index.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/app/views/index.xml)
@@ -18,7 +20,4 @@
 
 ### 执行 ```./build_ios.sh```
 ![ios_share](https://cloud.githubusercontent.com/assets/2350193/5606490/99f580e0-946c-11e4-89d3-7a3036bb5508.png)
-
-
-### 跳转[android教程](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/android)
 
