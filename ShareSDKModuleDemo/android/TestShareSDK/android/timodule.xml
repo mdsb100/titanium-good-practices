@@ -17,37 +17,37 @@
       <uses-permission android:name="android.permission.READ_PHONE_STATE" />
       <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
       <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+      <application>
+          <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+            <data android:scheme="tencent100371282" />
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+         </activity>
+
+         <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+          <!--易信分享回调 没有用到-->
+          <!-- <activity
+            android:name=".yxapi.YXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" /> -->
+      </application>
     </manifest>
-    <application>
-        <activity
-          android:name="cn.sharesdk.framework.ShareSDKUIShell"
-          android:theme="@android:style/Theme.Translucent.NoTitleBar"
-          android:configChanges="keyboardHidden|orientation|screenSize"
-          android:screenOrientation="portrait"
-          android:windowSoftInputMode="stateHidden|adjustResize" >
-          <intent-filter>
-          <data android:scheme="tencent100371282" />
-          <action android:name="android.intent.action.VIEW" />
-          <category android:name="android.intent.category.BROWSABLE" />
-          <category android:name="android.intent.category.DEFAULT" />
-          </intent-filter>
-       </activity>
-
-       <activity
-          android:name=".wxapi.WXEntryActivity"
-          android:theme="@android:style/Theme.Translucent.NoTitleBar"
-          android:configChanges="keyboardHidden|orientation|screenSize"
-          android:exported="true"
-          android:screenOrientation="portrait" />
-
-        <!--易信分享回调 没有用到-->
-        <!-- <activity
-          android:name=".yxapi.YXEntryActivity"
-          android:theme="@android:style/Theme.Translucent.NoTitleBar"
-          android:configChanges="keyboardHidden|orientation|screenSize"
-          android:exported="true"
-          android:screenOrientation="portrait" /> -->
-    </application>
 	</android>
 	<mobileweb>
 	</mobileweb>
