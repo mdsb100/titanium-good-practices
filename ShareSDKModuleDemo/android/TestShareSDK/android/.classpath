@@ -13,5 +13,19 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/mframework.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-Core-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-Email-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-Facebook-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-QQ-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-QZone-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-ShortMessage-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-SinaWeibo-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-TencentWeibo-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-Twitter-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-Wechat-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-Wechat-Core-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-Wechat-Favorite-2.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/ShareSDK-Wechat-Moments-2.5.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

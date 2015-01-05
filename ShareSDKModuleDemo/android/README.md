@@ -25,6 +25,8 @@ ShareSdk version: 2.5.7 android
 
 ### 仔细阅读[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)
 
+### 根据[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)使用"QuickIntegrater.jar"
+
 ### 创建module
 创建ios目录，目录结构为
 ```
@@ -59,3 +61,14 @@ windows如果不行就写绝对路径。
 这里没用易信所以注释掉了。
 注意！android:name=".wxapi.WXEntryActivity"。 必须是".wxapi.WXEntryActivity"。之后创建的目录结构也必须对应起来
 
+### 复制ShareSDK jar包到lib目录下
+![android_copy_jar](https://cloud.githubusercontent.com/assets/2350193/5615509/e3a7ec6c-9536-11e4-9acd-ea852c08e917.png)
+
+### 添加ShareSDK jar包。把下载的ShareSDK添加到项目中，这个时候Eclipse就派上用场了。最后结果[.classpath](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/.classpath)
+![android_add_jar](https://cloud.githubusercontent.com/assets/2350193/5615582/6feebbf6-9537-11e4-8850-261305e5e3dd.png)
+
+### 添加res到platform/android下
+![android_copy_res](https://cloud.githubusercontent.com/assets/2350193/5615511/e45eb384-9536-11e4-8776-2f85e55014e1.png)
+
+### 复制src
+![android_copy_src](https://cloud.githubusercontent.com/assets/2350193/5615737/f6b2924c-9538-11e4-961c-53cb76dba1d3.png)
