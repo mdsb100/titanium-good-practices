@@ -23,6 +23,8 @@ ShareSdk version: 2.10.4 ios
 ### 下载[ShareSDK](http://sharesdk.mob.com/Download)
 选择的是自定义下载，不包括所有的平台。
 
+### 仔细阅读[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)
+
 ### 创建module
 创建ios目录，目录结构为
 ```
@@ -64,7 +66,9 @@ ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsh
 ### 修改代码[ComBaidaoTestsharesdkModule.m](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ios/TestShareSDK/iphone/Classes/ComTestTestsharesdkModule.m)
 修改的代码中会去读取下一步中的ShareSDK.plist。
 
-这个方法"-(void)resumed:(id)sender"是处理handleOpenURL的回调。
+#### 仔细阅读代码！注意！这个方法"-(void)resumed:(id)sender"是处理handleOpenURL的回调。
+
+#### 根据ShareSDK官网文档自己去修改"share"这个方法，这不一定能完全满足你的需求。
 
 ### 在assets中增加[appicon.jpg](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios/TestShareSDK/assets/appicon.jpg)和[ShareSDK.plist](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios/TestShareSDK/assets/ShareSDK.plist)
 注意这一步很重要，配置了appkey
