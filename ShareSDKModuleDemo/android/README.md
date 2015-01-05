@@ -49,7 +49,7 @@ android.platform=${env.ANDROID_SDK}/platforms/android-10
 google.apis=${env.ANDROID_SDK}/add-ons/addon-google_apis-google-10
 android.ndk=${env.ANDROID_NDK}
 ```
-windows如果不行就写绝对路径。
+windows如果不行就写绝对路径。titanium.platform根据你自己的平台写。
 
 ### 加入一行```<property environment="env"/>```到[build.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/build.xml)
 
