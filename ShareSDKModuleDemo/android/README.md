@@ -78,3 +78,17 @@ ShareSDK.xml是配置appkey的。
 
 ### 修改[TestShareSDKModule.java](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/src/com/test/testsharesdk/TestShareSDKModule.java)
 增加share这个方法。
+
+### 预备发布。在android文件夹下增加文件[build.sh](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/build.sh)
+目的是把module解压到ShareSDKTestApp下。
+
+### 执行 `./build.sh`
+
+### 修改ShareSDKTestApp文件夹下的[tiapp.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/tiapp.xml)
+增加```<module platform="android" version="1.0.0">com.baidao.testsharesdk</module>```，让app能使用android下的sharesdk module。
+增加```<application android:debuggable="true" ></application>```以调试。
+
+### 删除"ShareSDKTestApp/platform/android/res/drawable-xxxhdpi"
+如果有这个文件夹就跑不起来。因为没有文件夹"android/TestShareSDK/android/platform/android/res/drawable-xxxhdpi"
+
+### 跳转回主[README.md](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo)

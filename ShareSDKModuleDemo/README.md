@@ -21,3 +21,7 @@
 ### 执行 ```./build_ios.sh```
 ![ios_share](https://cloud.githubusercontent.com/assets/2350193/5606490/99f580e0-946c-11e4-89d3-7a3036bb5508.png)
 
+### 在ShareSDKTestApp文件夹下创建[build_android.sh](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ShareSDKTestApp/build_android.sh)
+
+### 执行 ```./build_android.sh```
+![android_build](https://cloud.githubusercontent.com/assets/2350193/5617295/065acc14-9548-11e4-985e-a72eda1388eb.png)

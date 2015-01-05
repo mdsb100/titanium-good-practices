@@ -49,6 +49,7 @@
 		</plist>
 	</ios>
 	<android xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:debuggable="true" ></application>
 	</android>
 	<mobileweb>
 		<precache>
@@ -61,6 +62,7 @@
 	</mobileweb>
 	<modules>
     <module platform="iphone" version="1.0.0">com.test.testsharesdk</module>
+    <module platform="android" version="1.0.0">com.test.testsharesdk</module>
   </modules>
 	<deployment-targets>
 		<target device="android">true</target>
