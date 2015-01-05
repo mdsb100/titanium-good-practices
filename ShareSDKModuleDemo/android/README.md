@@ -54,3 +54,8 @@ windows如果不行就写绝对路径。
 ### Terminal中输入```and dist```。看看是否build成功。这里要装ant。
 
 ### 修改[timodule.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/timodule.xml)。增加权限，参考[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)
+
+### 修改[timodule.xml](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/timodule.xml)。增加权限，参考[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)。如果您集成了微信或者易信，还需要添加下面两个Activity。
+这里没用易信所以注释掉了。
+注意！android:name=".wxapi.WXEntryActivity"。 必须是".wxapi.WXEntryActivity"。之后创建的目录结构也必须对应起来
+

@@ -32,6 +32,21 @@
           <category android:name="android.intent.category.DEFAULT" />
           </intent-filter>
        </activity>
+
+       <activity
+          android:name=".wxapi.WXEntryActivity"
+          android:theme="@android:style/Theme.Translucent.NoTitleBar"
+          android:configChanges="keyboardHidden|orientation|screenSize"
+          android:exported="true"
+          android:screenOrientation="portrait" />
+
+        <!--易信分享回调 没有用到-->
+        <!-- <activity
+          android:name=".yxapi.YXEntryActivity"
+          android:theme="@android:style/Theme.Translucent.NoTitleBar"
+          android:configChanges="keyboardHidden|orientation|screenSize"
+          android:exported="true"
+          android:screenOrientation="portrait" /> -->
     </application>
 	</android>
 	<mobileweb>
