@@ -28,7 +28,7 @@
 ### 根据[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)使用"QuickIntegrater.jar"
 
 ### 创建module
-创建ios目录，目录结构为
+创建android目录，目录结构为
 ```
 ShareSDKModuleDemo
   |--ShareSDKTestApp
