@@ -18,7 +18,7 @@
 - ti version 3.4.1
 - ti sdk version 3.4.1
 - alloy version 1.5.1
-ShareSdk version: 2.5.7 android
+- ShareSdk version: 2.5.7 android
 
 ### 下载[ShareSDK](http://sharesdk.mob.com/Download)
 选择的是自定义下载，不包括所有的平台。
