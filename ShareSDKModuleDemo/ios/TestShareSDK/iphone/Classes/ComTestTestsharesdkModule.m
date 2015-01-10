@@ -366,6 +366,9 @@
                                     if (state == SSPublishContentStateSuccess)
                                     {
                                         NSLog(@"分享成功");
+                                        dispatch_async(dispatch_get_main_queue(), ^ {
+                                            [self fireEvent:@"share.success"];
+                                        });
                                     }
                                     else if (state == SSPublishContentStateFail)
                                     {

@@ -68,6 +68,9 @@ ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsh
 
 #### 仔细阅读代码！注意！这个方法"-(void)resumed:(id)sender"是处理handleOpenURL的回调。
 
+#### 如果你想在分享成功后发个时间给JS端知道，那么一定更要使用"dispatch_async(dispatch_get_main_queue(), ^ {});"。在代码中能找到相关示例代码。
+感谢@Shallong的反馈
+
 #### 根据ShareSDK官网文档自己去修改"share"这个方法，这不一定能完全满足你的需求。
 
 ### 在assets中增加[appicon.jpg](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios/TestShareSDK/assets/appicon.jpg)和[ShareSDK.plist](https://github.com/mdsb100/titanium-good-practices/tree/master/ShareSDKModuleDemo/ios/TestShareSDK/assets/ShareSDK.plist)
