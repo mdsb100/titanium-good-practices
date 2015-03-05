@@ -21,3 +21,5 @@ EP1: 这是一个快速帮助你利用Titanium建立一个HelloWorld应用的中
 - 如果跑不起来的话，试试输入`ti clean`
 
 ![Build](https://cloud.githubusercontent.com/assets/2350193/5546730/af64ebbe-8b84-11e4-8770-301e454d5288.png)
+
+[下一章](https://github.com/mdsb100/titanium-good-practices/blob/master/tutorial/EP2-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%8F%8A%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D.md)
