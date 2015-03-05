@@ -14,4 +14,4 @@ name: TestShareSDK
 moduleid: com.test.testsharesdk
 guid: df394c6f-fb4b-4cfb-a4bb-84cd4534b109
 platform: iphone
-minsdk: 3.4.1.GA
+minsdk: 3.5.0.GA

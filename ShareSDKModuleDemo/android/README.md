@@ -44,7 +44,7 @@ ti create --platforms=android --type=module --name=TestShareSDK --id=com.test.te
 
 ### 配置[build.properties](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/build.properties)
 ```
-titanium.platform=${env.HOME}/Library/Application Support/Titanium/mobilesdk/osx/3.4.1.GA/android
+titanium.platform=${env.HOME}/Library/Application Support/Titanium/mobilesdk/osx/3.5.0.GA/android
 android.platform=${env.ANDROID_SDK}/platforms/android-10
 google.apis=${env.ANDROID_SDK}/add-ons/addon-google_apis-google-10
 android.ndk=${env.ANDROID_NDK}

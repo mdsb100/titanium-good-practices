@@ -15,8 +15,8 @@
 - export ANT_HOME=/Users/apple/apache-ant-1.9.2
 - export ANDROID_SDK=/Users/apple/android-sdk
 - export ANDROID_NDK=/Users/apple/android-ndk-r8d
-- ti version 3.4.1
-- ti sdk version 3.4.1
+- ti version 3.5.0
+- ti sdk version 3.5.0
 - alloy version 1.5.1
 ShareSdk version: 2.10.4 ios
 
@@ -38,8 +38,6 @@ ShareSDKModuleDemo
 ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsharesdk --url=www.test.testsharesdk --workspace-dir=ios
 ```
 ![create_module](https://cloud.githubusercontent.com/assets/2350193/5605111/24a34b44-9424-11e4-8863-ae35eb13cb97.png)
-
-### 虽然当前Titanium SDK 版本不支持64位但这不影响moudle。创建出来的xcode项目Architectures已经是"Standard architectures(armv7, armv64)"
 
 ### 复制ShareSDK到module
 ![copy_sdk](https://cloud.githubusercontent.com/assets/2350193/5605230/97d9cbf0-942a-11e4-99bf-653a110a1e05.png)
