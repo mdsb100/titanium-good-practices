@@ -3,7 +3,7 @@ EP1: 这是一个快速帮助你利用Titanium建立一个HelloWorld应用的中
 
 [源码](https://github.com/mdsb100/titanium-good-practices/tree/master/HelloWord)
 
-这个教程使用Ti 3.5.0GA，平台基于Mac的，Windows下大致相同，若有问题请提issuse。参考[Titanium Command-Line Interface Reference](http://docs.appcelerator.com/titanium/3.0/#!/guide/Titanium_Command-Line_Interface_Reference)。
+这个教程使用Ti 3.5.0.GA，平台基于Mac的，Windows下大致相同，若有问题请提issuse。参考[Titanium Command-Line Interface Reference](http://docs.appcelerator.com/titanium/3.0/#!/guide/Titanium_Command-Line_Interface_Reference)。
 
 - 安装[nodejs](http://nodejs.org/#)，请选择自己对应的平台
 
