@@ -73,4 +73,4 @@ if (require('alloy').CFG.dosome){
 }
 ```
 
-[下一章](https://github.com/mdsb100/titanium-good-practices/blob/master/tutorial/EP2-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%8F%8A%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D.md)
+[下一章](https://github.com/mdsb100/titanium-good-practices/blob/master/tutorial/EP3-%E6%9E%84%E5%BB%BA%E6%A0%B7%E5%BC%8F%E5%8F%8A%E8%A7%86%E5%9B%BE.md)
