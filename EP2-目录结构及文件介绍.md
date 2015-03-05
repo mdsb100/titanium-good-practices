@@ -1,4 +1,4 @@
-请务必参考官网教程(alloy)[http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Framework]
+请务必参考官网教程[alloy](http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Framework)
 ======================
 
 ```
