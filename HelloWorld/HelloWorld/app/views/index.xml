@@ -1,6 +1,8 @@
 <Alloy>
 	<Window class="container" layout="vertical" >
 		<View height="200" backgroundColor="red">
+      <View top="50" height="100" width="Ti.UI.FILL" backgroundColor="green" layout="horizontal">
+      </View>
     </View>
     <View backgroundColor="blue">
     </View>
