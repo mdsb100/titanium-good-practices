@@ -5,6 +5,7 @@
 root
   |-app
   |-build
+  |-i18n
   |-platform
   |-plugins
   |-Resources
@@ -13,6 +14,7 @@ root
 
 - app:应用的代码资源等在里面
 - build:构建出地不同平台的项目
+- i18n:internationalization and localization.国际化与本地化
 - platform:不同平台的资源放在里面。如platform/iphone/xxx.m4a
 - plugins:各种插件。比如我们可以在构建时加入hooks去拦截做一些自己的事情
 - Resources:编译完成之后的源码资源等
