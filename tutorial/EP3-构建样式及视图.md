@@ -159,3 +159,36 @@ $.label.applyProperties({
   }
 });
 ```
+
+## 使用i18n
+创建目录Hellow/i18n/zh/string.xml。内容为:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="user">姓名</string>
+</resources>
+
+```
+简体中文
+
+创建目录Hellow/i18n/en/string.xml。内容为:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="user">name</string>
+</resources>
+
+```
+英语
+
+把index.xml中的label修改为textid="user"
+```
+<Label id="label" textid="user" color="red"></Label>
+
+```
+
+为了保证起作用。我们可以先在命令行中运行"ti clean"，在执行"ti build"
+
+##查看最后结果。因为我的模拟器语言是英语，所以显示的是"name"
+https://cloud.githubusercontent.com/assets/2350193/6520861/6b9bc742-c408-11e4-8096-780bb7112e2e.png

@@ -3,7 +3,7 @@
 		<View height="200" backgroundColor="red">
       <View top="50" height="100" width="Ti.UI.FILL" backgroundColor="green" layout="horizontal">
         <View width="Ti.UI.SIZE">
-          <Label id="label" text="姓名" color="red"></Label>
+          <Label id="label" textid="user" color="red"></Label>
         </View>
         <View backgroundColor="yellow">
           <TextField borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" width="200" height="30" >
