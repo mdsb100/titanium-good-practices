@@ -191,6 +191,6 @@ $.label.applyProperties({
 为了保证起作用。我们可以先在命令行中运行"ti clean"，在执行"ti build"
 
 ##查看最后结果。因为我的模拟器语言是英语，所以显示的是"name"
-https://cloud.githubusercontent.com/assets/2350193/6520861/6b9bc742-c408-11e4-8096-780bb7112e2e.png
+![EP3](https://cloud.githubusercontent.com/assets/2350193/6520861/6b9bc742-c408-11e4-8096-780bb7112e2e.png)
 
 [下一章](https://github.com/mdsb100/titanium-good-practices/blob/master/tutorial/EP4-%E6%8E%A7%E5%88%B6%E5%99%A8.md)
