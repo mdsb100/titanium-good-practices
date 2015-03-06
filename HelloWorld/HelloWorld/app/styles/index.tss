@@ -11,5 +11,10 @@
 "#label": {
 	font: {
 		fontSize: 12
-	}
+	},
+  color: "blue"
+}
+
+".color": {
+  color: "green"
 }

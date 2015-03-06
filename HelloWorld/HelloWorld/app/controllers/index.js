@@ -1,5 +1,8 @@
-function doClick(e) {
-    alert($.label.text);
-}
-
 $.index.open();
+
+$.label.applyProperties( {
+  color: "orange",
+  font: {
+    fontSize: 20
+  }
+} );
