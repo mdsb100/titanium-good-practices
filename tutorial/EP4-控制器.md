@@ -72,6 +72,8 @@ $.submit.addEventListener( "click", function() {
 
 ![ep4-1](https://cloud.githubusercontent.com/assets/2350193/6650440/2c4842aa-ca4d-11e4-90ba-de60f708a9fa.png)
 
+![ep4-2](https://cloud.githubusercontent.com/assets/2350193/6650529/23b53756-ca52-11e4-9578-adb1ca7a5c0b.png)
+
 ## 删除
 ```
 //点击时删除当前item
