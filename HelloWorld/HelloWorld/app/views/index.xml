@@ -5,10 +5,8 @@
         <View width="Ti.UI.SIZE">
           <Label id="label" textid="user" color="red"></Label>
         </View>
-        <View backgroundColor="yellow">
-          <TextField borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" width="200" height="30" >
-          </TextField>
-        </View>
+        <TextField borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" backgroundColor="white" color="#336699" width="200" height="40" left="20">
+        </TextField>
       </View>
     </View>
     <View backgroundColor="blue">

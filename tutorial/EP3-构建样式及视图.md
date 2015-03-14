@@ -63,10 +63,8 @@
         <View width="Ti.UI.SIZE">
           <Label id="label" text="姓名"></Label>
         </View>
-        <View backgroundColor="yellow">
-          <TextField borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" width="200" height="30" >
-          </TextField>
-        </View>
+        <TextField borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" backgroundColor="white" color="#336699" width="200" height="40" left="20">
+        </TextField>
       </View>
     </View>
     <View backgroundColor="blue">
@@ -191,8 +189,6 @@ $.label.applyProperties({
 为了保证起作用。我们可以先在命令行中运行"ti clean"，在执行"ti build"
 
 ##查看最后结果。因为我的模拟器语言是英语，所以显示的是"name"
-![EP3](https://cloud.githubusercontent.com/assets/2350193/6520861/6b9bc742-c408-11e4-8096-780bb7112e2e.png)
-
-checkout [commit](https://github.com/mdsb100/titanium-good-practices/commit/30063387b821a5fb3a2ba6f77ceb8dc290ef615b)
+![ep3](https://cloud.githubusercontent.com/assets/2350193/6650399/c9b232e2-ca4a-11e4-90c5-5ef8217d486f.png)
 
 [下一章](https://github.com/mdsb100/titanium-good-practices/blob/master/tutorial/EP4-%E6%8E%A7%E5%88%B6%E5%99%A8.md)
