@@ -5,11 +5,25 @@
         <View width="Ti.UI.SIZE">
           <Label id="label" textid="user" color="red"></Label>
         </View>
-        <TextField borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" backgroundColor="white" color="#336699" width="200" height="40" left="20">
+        <TextField id="textfield" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" backgroundColor="white" color="#336699" width="200" height="40" left="20">
         </TextField>
       </View>
+      <Button id="submit" title="提交" bottom="0" left="25" width="44" height="25" backgroundColor="white" color="black"></Button>
     </View>
     <View backgroundColor="blue">
+      <ListView id="namelist" top="7" right="7" left="7" bottom="0" separatorColor="transparent" backgroundColor="white" separatorStyle="-1" defaultItemTemplate="name">
+        <Templates>
+          <ItemTemplate name="name" height="30" >
+            <View bindId="container" height="100%" width="100%" backgroundColor="gray">
+              <View layout="horizontal" left="10">
+                <Label text="Name is "></Label>
+                <Label bindId="name"></Label>
+              </View>
+            </View>
+          </ItemTemplate>
+        </Templates>
+        <ListSection></ListSection>
+      </ListView>
     </View>
-	</Window>
+  </Window>
 </Alloy>
