@@ -193,4 +193,6 @@ $.label.applyProperties({
 ##查看最后结果。因为我的模拟器语言是英语，所以显示的是"name"
 ![EP3](https://cloud.githubusercontent.com/assets/2350193/6520861/6b9bc742-c408-11e4-8096-780bb7112e2e.png)
 
+checkout [commit](https://github.com/mdsb100/titanium-good-practices/commit/30063387b821a5fb3a2ba6f77ceb8dc290ef615b)
+
 [下一章](https://github.com/mdsb100/titanium-good-practices/blob/master/tutorial/EP4-%E6%8E%A7%E5%88%B6%E5%99%A8.md)
