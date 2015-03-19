@@ -23,6 +23,17 @@
 官网解释:Children are laid out vertically from top to bottom.The first child is laid out top units from its parent's bounding box. Each subsequent child is laid out below the previous child.The space between children is equal to the upper child's bottom value plus the lower child's top value.
 子元素都是自上而下垂直布局。第一个贴着父容器上边界布局。其他每一个子元素紧接着前一个。
 
+如果在此view上增加top="5"那么意味着我离前一个元素5个单位
+```
+<View backgroundColor="blue" top="5">
+```
+
+如果在此view上增加bottom="5"那么意味着我离我身后的元素5个单位
+```
+<View height="200" backgroundColor="red" bottom="5">
+</View>
+```
+
 - - -
 
 ##修改HelloWord/app/views/index.xml项目为:
@@ -45,8 +56,8 @@
 官网解释:composite (or absolute). Default layout. A child view is positioned based on its positioning properties or "pins" (top, bottom, left, right and center). If no positioning properties are specified, the child is centered.
 默认值为绝对定位.定位依赖top,bottom,left,right这些属性，如果没有设置，那就是上下左右居中的。
 
-###  layout="horizontal"
-横向的定位。和垂直的不太相同。具体内容参考官网。目前先简单使用。
+### layout="horizontal"
+横向的定位。和垂直的大致相同。具体内容参考官网。目前先简单使用。
 
 ### Ti.UI.FILL
 官网解释:The view should size itself to fill its parent.
