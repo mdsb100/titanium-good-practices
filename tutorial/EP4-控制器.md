@@ -33,6 +33,20 @@ controller控制器
   </Window>
 </Alloy>
 ```
+
+## 模板
+这里使用了模板来构建每一个items。
+```
+<ItemTemplate name="name" height="30" >
+创建了一个名字叫做"name"的模板
+```
+
+```
+<ListView ... defaultItemTemplate="name">
+这里默认使用叫做"name"的模板
+```
+
+
 ## 增加代码到HelloWord/app/controllers/index.js:
 ```
 $.submit.addEventListener( "click", function() {
@@ -56,8 +70,8 @@ $.submit.addEventListener( "click", function() {
   } else {
     $.namelist.sections[ 0 ].appendItems( [
       {
-        name: {
-          text: name
+        name: { //这个name 对应的是bindId="name"
+          text: name //这个text 对应的是bindId="name"的Label属性
         }
       }
     ] );
