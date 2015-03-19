@@ -15,9 +15,13 @@
         <Templates>
           <ItemTemplate name="name" height="30" >
             <View bindId="container" height="100%" width="100%" backgroundColor="gray">
-              <View layout="horizontal" left="10">
+              <View layout="horizontal" left="10" width="Ti.UI.SIZE">
                 <Label text="Name is "></Label>
                 <Label bindId="name"></Label>
+              </View>
+              <View layout="horizontal" right="10" width="Ti.UI.SIZE">
+                <Label text="create at "></Label>
+                <Label bindId="time"></Label>
               </View>
             </View>
           </ItemTemplate>

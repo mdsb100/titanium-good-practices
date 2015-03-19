@@ -1,3 +1,5 @@
+var moment = require("moment");
+
 $.index.open();
 
 $.label.applyProperties( {
@@ -15,7 +17,10 @@ $.submit.addEventListener( "click", function() {
     $.namelist.sections[ 0 ].appendItems( [
       {
         name: {
-          text: name
+          text: name //这个text 对应的是bindId="name"的Label属性
+        },
+        time: {
+          text: moment().format("HH:mm:ss") //这个text 对应的是bindId="time"的Label属性
         }
       }
     ] );
