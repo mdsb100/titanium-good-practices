@@ -33,6 +33,8 @@ app
   |  \-images
   |
   |-controllers
+  |-lib
+  |  \-util.js
   |-models
   |-views
   |-styles
@@ -43,6 +45,7 @@ app
 ```
 - assets:放图片字体等。如果图片路径是"/images/logo.png"在ios平台下运行，它会先去找"ios/images/logo.png"，如果没找到再找"images/logo.png"。是根据平台来找的。
 - controllers: 控制器。js文件。
+- lib: 第三方js文件，util之类js都可以放这里面。js文件。
 - models: 模型（数据）。js文件。backbone model。
 - views: 视图。xml文件。
 - styles: 样式。tss文件。
@@ -50,6 +53,16 @@ app
 - widgets: 组件。你可以去市场下载别人的组件使用。注意要在config.json中配置。参考[widgets](http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Widgets)
 - alloy.js: 最先运行的。你可以定义一些："Alloy.Globals.someGlobalFunction = function(){};"
 - config.json: 配置文件。配置环境变量，样式风格等。
+
+### lib/util.js如何使用呢。
+```
+var util = require('util');
+```
+lib对应的是js运行时的根目录。所以如果有个文件是lib/config/log.js。应当怎么使用:
+```
+var log = rquire('config/log')
+```
+
 
 ### [config.json](http://docs.appcelerator.com/titanium/latest/#!/guide/Project_Configuration_File_(config.json))。具体参考官网。
 如：
