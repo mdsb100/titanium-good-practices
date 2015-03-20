@@ -77,6 +77,19 @@ shareicon.jpg是分享的默认图片。
 
 ### 修改[TestShareSDKModule.java](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/src/com/test/testsharesdk/TestShareSDKModule.java)
 增加share这个方法。
+因为有人问如何初始化SDK，所以在教程里特别着重指出这个方法
+```
+@Kroll.onAppCreate
+public static void onAppCreate(TiApplication app)
+{
+  Log.d(LCAT, "inside onAppCreate");
+  ShareSDK.initSDK(app);
+
+  SHAREICON = getApplicationResource(SHAREICONNAME);
+  SHAREICONPATH = copyFileIntoSDCard(app, SHAREICONNAME+".jpg");
+  // put module init code that needs to run when the application is created
+}
+```
 
 ### 预备发布。在android文件夹下增加文件[build.sh](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/android/TestShareSDK/android/build.sh)
 目的是把module解压到ShareSDKTestApp下。
