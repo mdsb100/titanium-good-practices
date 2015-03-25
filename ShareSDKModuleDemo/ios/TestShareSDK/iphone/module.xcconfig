@@ -30,4 +30,7 @@
 
 t_path = "../../modules/iphone/com.test.testsharesdk/1.0.0/platform/ShareSDK/"
 
+// 所以t_path其实是"ShareSDKTestApp/modules/iphone/com.test.testsharesdk/1.0.0/platform/ShareSDK/"
+// -F$(t_path)UI/ 是search path 给.a用的
+
 OTHER_LDFLAGS=$(inherited) -framework CoreTelephony -framework SystemConfiguration -framework QuartzCore -framework Security -framework Social -framework Accounts -framework MessageUI -F$(t_path) -framework ShareSDK -F$(t_path)Core/ -framework AGCommon -framework ShareSDKCoreService -F$(t_path)UI/ -framework ShareSDKFlatShareViewUI -framework ShareSDKShareActionSheet -F$(t_path)Connection/ -framework FacebookConnection -framework MailConnection -framework QQConnection -framework QZoneConnection -framework SinaWeiboConnection -framework TencentWeiboConnection -framework TwitterConnection -framework WeChatConnection -framework SMSConnection -F$(t_path)Extend/QQConnectSDK/ -framework TencentOpenAPI
