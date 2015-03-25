@@ -26,11 +26,13 @@
 // IMPORTANT NOTE: always use $(inherited) in your overrides
 //
 
-// 此路径根是 ShareSDKTestApp/build/iphone
+// 此路径根是 ShareSDKTestApp/build/iphone 是app的相对路径
 
 t_path = "../../modules/iphone/com.test.testsharesdk/1.0.0/platform/ShareSDK/"
 
 // 所以t_path其实是"ShareSDKTestApp/modules/iphone/com.test.testsharesdk/1.0.0/platform/ShareSDK/"
-// -F$(t_path)UI/ 是search path 给.a用的
+// -F$(t_path) 是搜索路径
+// module里确保你把第三方SDK放到platform下。当生成module并且upzip的时候，platform文件夹也会被拷到app的目录下，这样就能找到framework了！
+// 如: -F$(t_path) -framework ShareSDK。其实完整的是"ShareSDKTestApp/modules/iphone/com.test.testsharesdk/1.0.0/platform/ShareSDK/ShareSDK.framework" 
 
 OTHER_LDFLAGS=$(inherited) -framework CoreTelephony -framework SystemConfiguration -framework QuartzCore -framework Security -framework Social -framework Accounts -framework MessageUI -F$(t_path) -framework ShareSDK -F$(t_path)Core/ -framework AGCommon -framework ShareSDKCoreService -F$(t_path)UI/ -framework ShareSDKFlatShareViewUI -framework ShareSDKShareActionSheet -F$(t_path)Connection/ -framework FacebookConnection -framework MailConnection -framework QQConnection -framework QZoneConnection -framework SinaWeiboConnection -framework TencentWeiboConnection -framework TwitterConnection -framework WeChatConnection -framework SMSConnection -F$(t_path)Extend/QQConnectSDK/ -framework TencentOpenAPI
