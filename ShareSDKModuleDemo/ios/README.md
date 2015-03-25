@@ -50,7 +50,7 @@ ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsh
 ### 把platform文件夹拖入到项目中，需要"copy items if needed"。
 ![drag_into_product](https://cloud.githubusercontent.com/assets/2350193/5605268/de3062ec-942c-11e4-89ee-d20b7500e2a8.png)
 
-### 把所有bundle文件和string文件放入到platform/iphone文件夹下。
+### 把所有bundle文件和string文件放入到platform/iphone文件夹下。很重要。
 若有不明白可以查看titanium官网了解 platform/iphone的意义
 ![ios_bundle](https://cloud.githubusercontent.com/assets/2350193/5606431/91c49124-946a-11e4-80ea-659204d9fcbc.png)
 
