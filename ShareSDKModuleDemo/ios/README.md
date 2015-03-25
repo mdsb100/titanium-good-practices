@@ -54,7 +54,7 @@ ti create --platforms=ios --type=module --name=TestShareSDK --id=com.test.testsh
 若有不明白可以查看titanium官网了解 platform/iphone的意义
 ![ios_bundle](https://cloud.githubusercontent.com/assets/2350193/5606431/91c49124-946a-11e4-80ea-659204d9fcbc.png)
 
-### 修改[module.xcconfig](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ios/TestShareSDK/iphone/module.xcconfig)。这一步非常重要，你仔细看xcconfig。用到了系统的framework，也用到了第三方的framework。还有search path！
+### 修改[module.xcconfig](https://github.com/mdsb100/titanium-good-practices/blob/master/ShareSDKModuleDemo/ios/TestShareSDK/iphone/module.xcconfig)。这一步非常重要，请仔细看xcconfig。用到了系统的framework，也用到了第三方的framework。还有search path！
 需要注意的是，如果你用什么平台就要加什么Framework。参考[官网](http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)
 
 ### 仔细阅读官网，如果你需要用到的平台需要特殊设置，请照着官网做！
