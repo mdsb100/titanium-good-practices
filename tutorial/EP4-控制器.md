@@ -192,3 +192,7 @@ $.submit.addEventListener( "click", function() {
 ![ep4-4](https://cloud.githubusercontent.com/assets/2350193/6733257/f84e9e2a-ce8b-11e4-96a1-5776130e344a.png)
 
 ## 截图中看到android的模拟器，附上[Genymotin安装](http://docs.appcelerator.com/titanium/3.0/#!/guide/Installing_Genymotion)链接。这个模拟器非常好用。
+使用命令行时，可以类似这样:
+```
+ti build -p android -C 'Google Nexus 4 - 4.3 - API 18 - 768x1280'
+```
