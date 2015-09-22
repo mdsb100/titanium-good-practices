@@ -96,9 +96,6 @@ book.on("change:title", function(book, title){
 ```
 
 ### 方法对照
-```
-
-```
 
 ```
 (Backbone Method) (Sync CRUD Method) (Equivalent HTTP Method) (Equivalent SQL Method)
