@@ -96,6 +96,7 @@ book.on("change:title", function(book, title){
 ```
 
 ### 方法对照
+[参考](http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Sync_Adapters_and_Migrations-section-36739597_AlloySyncAdaptersandMigrations-BackboneSync)
 
 ```
 (Backbone Method) (Sync CRUD Method) (Equivalent HTTP Method) (Equivalent SQL Method)
