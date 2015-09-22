@@ -58,7 +58,7 @@ $.submit.addEventListener( "click", function() {
   }
 } );
 ```
-
+[下一章](https://github.com/mdsb100/titanium-good-practices/blob/master/tutorial/EP5-%E6%A8%A1%E5%9E%8B%E5%92%8CSync.md)
 alloy会自动绑定'submit'按钮到'$'对象上。我们在'submit'上绑定点击事件。
 
 ## 接下来把name加入listview中
